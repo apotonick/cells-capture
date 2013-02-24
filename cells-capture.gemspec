@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = CellsCapture::VERSION
   gem.authors       = ["Nick Sutterer"]
   gem.email         = ["apotonick@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Provides content_for for Cells.}
+  gem.summary       = %q{Provides content_for for Cells.}
   gem.homepage      = ""
   gem.license       = "MIT"
 
