@@ -5,7 +5,7 @@ Provides a global (brrr) `#content_for` for Cells.
 
 # Installation
 
-	gem 'cells-capture'
+	gem 'cells-capture', require: 'cells_capture'
 
 
 # Usage
