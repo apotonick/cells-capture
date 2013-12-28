@@ -10,11 +10,10 @@ module Cell
 
       attr_accessor :global_tpl
 
-
       module RenderCellExtension
         def render_cell(*args)
           super(*args) do |cell| # FIXME: block gets lost.
-            cell.global_tpl = self
+            cell.global_tpl = self if cell.respond_to? :global_tpl
           end
         end
       end
