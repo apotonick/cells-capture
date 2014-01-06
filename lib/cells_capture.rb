@@ -13,7 +13,7 @@ module Cell
       module RenderCellExtension
         def render_cell(*args)
           super(*args) do |cell| # FIXME: block gets lost.
-            cell.global_tpl = self if cell.respond_to? :global_tpl
+            cell.global_tpl = self if cell.is_a? ::Cell::Rails::Capture
           end
         end
       end
