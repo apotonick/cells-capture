@@ -1,1 +1,1 @@
-<%= render_cell(:bassist, :content_for) %><pre><%= yield :recorded %></pre>
+<%= render_cell(:bassist, :content_for) { |c| c.data_from_block = "I am data from block"} %><pre><%= yield :recorded %></pre>

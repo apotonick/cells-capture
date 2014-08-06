@@ -30,6 +30,4 @@ The captured content is now available globally (brrr) in your controller views o
 
 # Limitations
 
-Currently, if you passed a block to `#render_cell` in your view this won't work anymore.
-
-Also, I want to note that I am not a big fan of breaking cells' encapsulation by emiting content into a global variable. However, as many people asked for it I provide this feature to improve the world's happiness factor.
+I want to note that I am not a big fan of breaking cells' encapsulation by emitting content into a global variable. However, as many people asked for it I provide this feature to improve the world's happiness factor.

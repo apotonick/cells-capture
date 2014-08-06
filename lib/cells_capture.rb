@@ -11,8 +11,9 @@ module Cell
       attr_accessor :global_tpl
 
       module RenderCellExtension
-        def render_cell(*args)
-          super(*args) do |cell| # FIXME: block gets lost.
+        def render_cell(*args, &block)
+          super(*args) do |cell|
+            block.call(cell) if block_given?
             cell.global_tpl = self if cell.is_a? ::Cell::Rails::Capture
           end
         end

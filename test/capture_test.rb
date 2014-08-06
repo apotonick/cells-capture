@@ -16,7 +16,7 @@ end
 
 class BassistCell < Cell::Rails
   append_view_path("test/views")
-
+  attr_accessor :data_from_block
   #helper ::Cells::Helpers::CaptureHelper
   def content_for 
     render 
@@ -31,6 +31,11 @@ class CaptureTest < ActionController::TestCase
 
   test "#content_for" do
     get 'show'
-    assert_equal "\n\n\nkeep me!<pre>DummDooDiiDoo</pre>", @response.body
+    assert_includes @response.body, "keep me!<pre>DummDooDiiDoo</pre>"
+  end
+
+  test "#render_cell passes arguments to the cell" do
+    get 'show'
+    assert_includes @response.body, "I am data from block"
   end
 end
